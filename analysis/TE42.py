@@ -72,20 +72,20 @@ class TE42(object):
         self.contrast = Contrast(self.image, self.gray_scale_roi, self.cct, self.light)
         self.contrast.eva_contrast()
 
-        self.info['score']['Global Contrast'] = self.contrast.global_contrast_score
-        self.info['result']['Global Contrast'] = self.contrast.global_contrast_result
+        self.info['score']['Global_Contrast'] = self.contrast.global_contrast_score
+        self.info['result']['Global_Contrast'] = self.contrast.global_contrast_result
 
-        self.info['score']['Avg Local Contrast'] = self.contrast.local_contrast_score
-        self.info['result']['Avg Local Contrast'] = self.contrast.local_contrast_result
+        self.info['score']['Avg_Local_Contrast'] = self.contrast.local_contrast_score
+        self.info['result']['Avg_Local_Contrast'] = self.contrast.local_contrast_result
 
-        self.info['score']['Min Local Contrast'] = self.contrast.min_local_contrast_score
-        self.info['result']['Min Local Contrast'] = self.contrast.min_local_contrast_result
+        self.info['score']['Min_Local_Contrast'] = self.contrast.min_local_contrast_score
+        self.info['result']['Min_Local_Contrast'] = self.contrast.min_local_contrast_result
 
-        self.info['score']['Dark Level'] = self.contrast.black_level_score
-        self.info['result']['Dark Level'] = self.contrast.black_level_result
+        self.info['score']['Dark_Level'] = self.contrast.black_level_score
+        self.info['result']['Dark_Level'] = self.contrast.black_level_result
 
-        self.info['score']['Bright Level'] = self.contrast.saturation_score
-        self.info['result']['Bright Level'] = self.contrast.saturation_result
+        self.info['score']['Bright_Level'] = self.contrast.saturation_score
+        self.info['result']['Bright_Level'] = self.contrast.saturation_result
 
     def eva_visual_noise(self):
         vn = VisualNoise(self.image, self.gray_scale_roi, self.cct, self.light)
